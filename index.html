@@ -41,7 +41,7 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./styles.css" />
 
     <script type="application/ld+json">
       {
@@ -79,7 +79,7 @@
           <span class="brand-mark">PA</span>
           <span class="brand-text">
             <strong>Pavilion Atelier</strong>
-            <small>Architecture • Interiors • Design Intelligence</small>
+            <small>Architecture &bull; Interiors &bull; Design Intelligence</small>
           </span>
         </a>
 
@@ -107,7 +107,7 @@
 
         <div class="container hero-grid">
           <div class="hero-copy-block reveal">
-            <p class="kicker">Luxury Architecture • Interior Design • 3D Visualization</p>
+            <p class="kicker">Luxury Architecture &bull; Interior Design &bull; 3D Visualization</p>
             <h1 id="hero-title">Spaces That Win Attention in the First 3 Seconds.</h1>
             <p class="hero-copy">
               Pavilion Atelier helps homeowners, developers, and brands build spaces that feel iconic and function
@@ -153,13 +153,12 @@
           <p class="kicker reveal">Services</p>
           <h2 class="reveal">Everything required to plan, design, and deliver exceptional spaces</h2>
           <p class="section-note reveal">
-            If a visitor lands from Google Ads or Meta Ads, this section should make one thing clear instantly:
-            Pavilion Atelier handles complete architecture and design execution with premium quality.
+            Pavilion Atelier handles complete architecture and design execution with premium quality &mdash; from first sketch to final walkthrough.
           </p>
           <div class="card-grid">
             <article class="service-card reveal"><h3>Architectural Design</h3><p>Concept development, planning, elevations, and technical documentation.</p></article>
             <article class="service-card reveal"><h3>Interior Design</h3><p>Residential and commercial interiors optimized for mood, use, and identity.</p></article>
-            <article class="service-card reveal"><h3>Landscape & Facade</h3><p>Outdoor and external design that raises curb appeal and project value.</p></article>
+            <article class="service-card reveal"><h3>Landscape &amp; Facade</h3><p>Outdoor and external design that raises curb appeal and project value.</p></article>
             <article class="service-card reveal"><h3>3D Visualization</h3><p>Realistic previews and visual storytelling before execution begins.</p></article>
             <article class="service-card reveal"><h3>Renovation Strategy</h3><p>Transform existing spaces with smarter layouts and elevated design language.</p></article>
             <article class="service-card reveal"><h3>Turnkey Coordination</h3><p>End-to-end guidance from concept to handover for better control.</p></article>
@@ -169,8 +168,8 @@
 
       <section class="section" id="portfolio">
         <div class="container">
-          <p class="kicker reveal">Portfolio Direction</p>
-          <h2 class="reveal">The website should prove the quality before the meeting even starts</h2>
+          <p class="kicker reveal">Portfolio</p>
+          <h2 class="reveal">Our work speaks before we do</h2>
           <div class="showcase-grid">
             <article class="showcase-card tall reveal">
               <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=80" loading="lazy" alt="Large modern villa architectural project" />
@@ -211,14 +210,14 @@
 
       <section class="section social-proof" aria-label="Social proof section">
         <div class="container">
-          <p class="kicker reveal">Proof & Presence</p>
+          <p class="kicker reveal">Proof &amp; Presence</p>
           <h2 class="reveal">Trusted across platforms by design-focused clients</h2>
           <div class="social-grid reveal">
-            <a href="https://www.linkedin.com/company/pavilion-design-consultants/" target="_blank" rel="noreferrer">LinkedIn</a>
-            <a href="https://www.instagram.com/pavilion_design_consultants" target="_blank" rel="noreferrer">Instagram</a>
-            <a href="https://www.facebook.com/PavilionDesignConsultant/" target="_blank" rel="noreferrer">Facebook</a>
-            <a href="https://www.youtube.com/@PAVILIONDESIGNCONSULTANTS" target="_blank" rel="noreferrer">YouTube</a>
-            <a href="https://www.pinterest.com/paviliondesignconsultant/" target="_blank" rel="noreferrer">Pinterest</a>
+            <a href="https://www.linkedin.com/company/pavilion-design-consultants/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://www.instagram.com/pavilion_design_consultants" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a href="https://www.facebook.com/PavilionDesignConsultant/" target="_blank" rel="noopener noreferrer">Facebook</a>
+            <a href="https://www.youtube.com/@PAVILIONDESIGNCONSULTANTS" target="_blank" rel="noopener noreferrer">YouTube</a>
+            <a href="https://www.pinterest.com/paviliondesignconsultant/" target="_blank" rel="noopener noreferrer">Pinterest</a>
           </div>
         </div>
       </section>
@@ -226,11 +225,10 @@
       <section class="section section-contact" id="contact">
         <div class="container contact-grid">
           <div class="reveal">
-            <p class="kicker">Lead Conversion</p>
-            <h2>Let’s Design Something Extraordinary</h2>
+            <p class="kicker">Get Started</p>
+            <h2>Let's Design Something Extraordinary</h2>
             <p>
-              Share your project scope and we will respond with a tailored roadmap. This section is intentionally built
-              to turn curiosity into qualified design leads.
+              Share your project scope and we will respond with a tailored roadmap. Whether you have a detailed brief or just an idea, we'll turn it into a clear plan.
             </p>
             <ul class="checklist">
               <li>Free strategic consultation</li>
@@ -239,7 +237,7 @@
             </ul>
           </div>
 
-          <form class="lead-form reveal" action="#" method="post">
+          <form class="lead-form reveal" id="leadForm" novalidate>
             <label>Full Name <input type="text" name="name" required /></label>
             <label>Email Address <input type="email" name="email" required /></label>
             <label>Phone Number <input type="tel" name="phone" required /></label>
@@ -247,16 +245,19 @@
               Service Needed
               <select name="service" required>
                 <option value="" selected disabled>Select service</option>
-                <option>Architectural Design</option>
-                <option>Interior Design</option>
-                <option>Landscape / Facade</option>
-                <option>3D Visualization</option>
-                <option>Turnkey Coordination</option>
+                <option value="Architectural Design">Architectural Design</option>
+                <option value="Interior Design">Interior Design</option>
+                <option value="Landscape / Facade">Landscape / Facade</option>
+                <option value="3D Visualization">3D Visualization</option>
+                <option value="Turnkey Coordination">Turnkey Coordination</option>
               </select>
             </label>
             <label>Project Brief <textarea name="brief" rows="4" placeholder="Share location, size, timeline, and goals."></textarea></label>
             <button type="submit" class="btn btn-primary btn-block">Request Proposal</button>
             <p class="form-note">By submitting, you agree to be contacted by Pavilion Atelier.</p>
+            <div class="form-success" id="formSuccess" style="display:none;">
+              <p style="color:#ead1a8;font-weight:600;text-align:center;padding:1rem 0;">Thank you! We'll be in touch within 24 hours.</p>
+            </div>
           </form>
         </div>
       </section>
@@ -264,11 +265,11 @@
 
     <footer class="site-footer">
       <div class="container footer-wrap">
-        <p>© <span id="year"></span> Pavilion Atelier. Formerly Pavilion Design Studio.</p>
+        <p>&copy; <span id="year"></span> Pavilion Atelier. All rights reserved.</p>
         <a href="#top">Back to top</a>
       </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="./script.js"></script>
   </body>
 </html>
