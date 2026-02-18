@@ -3,7 +3,6 @@ const navLinks = document.querySelector('.nav-links');
 const yearNode = document.querySelector('#year');
 const revealNodes = document.querySelectorAll('.reveal');
 
-/* ─── Mobile Nav ─── */
 if (navToggle && navLinks) {
   navToggle.addEventListener('click', () => {
     const isOpen = navLinks.classList.toggle('is-open');
@@ -18,7 +17,6 @@ if (navToggle && navLinks) {
   });
 }
 
-/* ─── Scroll Reveal ─── */
 if (revealNodes.length) {
   const revealObserver = new IntersectionObserver(
     (entries) => {
@@ -38,41 +36,6 @@ if (revealNodes.length) {
   revealNodes.forEach((node) => revealObserver.observe(node));
 }
 
-/* ─── Year ─── */
 if (yearNode) {
   yearNode.textContent = String(new Date().getFullYear());
-}
-
-/* ─── Form Submission ─── */
-const leadForm = document.getElementById('leadForm');
-const formSuccess = document.getElementById('formSuccess');
-
-if (leadForm) {
-  leadForm.addEventListener('submit', function (e) {
-    e.preventDefault();
-
-    /* Basic validation */
-    const name = leadForm.querySelector('[name="name"]');
-    const email = leadForm.querySelector('[name="email"]');
-    const phone = leadForm.querySelector('[name="phone"]');
-    const service = leadForm.querySelector('[name="service"]');
-
-    if (!name.value.trim() || !email.value.trim() || !phone.value.trim() || !service.value) {
-      alert('Please fill in all required fields.');
-      return;
-    }
-
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim())) {
-      alert('Please enter a valid email address.');
-      return;
-    }
-
-    /* Hide form fields, show success */
-    Array.from(leadForm.children).forEach((child) => {
-      if (child.id !== 'formSuccess') {
-        child.style.display = 'none';
-      }
-    });
-    formSuccess.style.display = 'block';
-  });
 }
